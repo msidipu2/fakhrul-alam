@@ -1,0 +1,11 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    match /{allPaths=**} {
+      // Public Read for all uploaded renders and showreels
+      allow read: if true;
+      // Admin Write only for authenticated users
+      allow write: if request.auth != null;
+    }
+  }
+}
