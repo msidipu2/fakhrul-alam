@@ -14,8 +14,8 @@ const firebaseConfig = {
 
 export const isFirebaseConfigured = Boolean(
   process.env.NEXT_PUBLIC_FIREBASE_API_KEY &&
-    process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID &&
-    process.env.NEXT_PUBLIC_FIREBASE_API_KEY !== 'placeholder_api_key'
+  process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID &&
+  process.env.NEXT_PUBLIC_FIREBASE_API_KEY !== 'placeholder_api_key'
 )
 
 let app: FirebaseApp | null = null
